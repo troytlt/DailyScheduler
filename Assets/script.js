@@ -1,7 +1,7 @@
 $(document).ready(function(){
 // Define an array that stores things to do
 //"empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty", "empty"
-
+var arr=[];
 // Show current time using Jquery
 let date = new Date($.now());
 $("#currentDay").text(date);
@@ -19,7 +19,7 @@ function color() {
             $("#"+targetId).addClass("future");
         }
     }
-    console.log(hour);
+
 }
 color();
 // function to input todo list
@@ -48,7 +48,7 @@ $("button").on("click",function(event){
 
 });
 //function to store data
-var arr=[];
+
 function stored(x) {localStorage.setItem("task",JSON.stringify(x))};
 //function to get local storage
 function getLocalStorage() {

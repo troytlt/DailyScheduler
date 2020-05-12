@@ -19,6 +19,7 @@ function color() {
             $("#"+targetId).addClass("future");
         }
     }
+    console.log(hour);
 }
 color();
 // function to input todo list
@@ -53,11 +54,12 @@ function stored(x) {localStorage.setItem("task",JSON.stringify(x))};
 function getLocalStorage() {
     var newTask = JSON.parse(localStorage.getItem("task"));
     arr= newTask;
-    printTextArea(newTask);
+    
 }
-printTextArea(arr);
+printTextArea();
 //function to print arr to textarea div
 function printTextArea() {
+    getLocalStorage();
     console.log(arr);
     for (let i=1; i<arr.length+1;i++) {
         if (arr[i] === undefined) {

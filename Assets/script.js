@@ -44,8 +44,6 @@ $("button").on("click",function(event){
     alert($("#"+num).text());
     arr[num]=$("#"+num).text();
     stored(arr);
-    getLocalStorage();
-
 });
 //function to store data
 
